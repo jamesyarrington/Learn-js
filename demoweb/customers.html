@@ -5,14 +5,16 @@
 	<title>Customers</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="site.css">
+	<script src="http://www.w3schools.com/appml/2.0.1/appml.js"></script>
 </head>
 
 <body>
 
 	<nav id="nav01"></nav>
 
-	<div id="main">
+	<div id="main">		
 		<h1>Customers</h1>
+
 		<div id="id01"></div>
 <!--
  		<table>
@@ -38,12 +40,26 @@
 			</tr>
 		</table>
 -->
+<!--
+		<table appml-data="http://www.w3schools.com/website/customers.php">
+			<tr>
+				<th>Name</th>
+				<th>City</th>
+				<th>Country</th>
+			</tr>
+			<tr appml-repeat="records">
+				<td>{{Name}}</td>
+				<td>{{City}}</td>
+				<td>{{Country}}</td>
+			</tr>
+		</table>
+-->
 		<footer id="foot01"></footer>
 	</div>
 
 	<script>
 		var xmlhttp = new XMLHttpRequest();
-		var url = "http://www.w3schools.com/website/customers.php";
+		var url = "http://www.w3schools.com/website/customers_db_mysql.php";
 
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -74,10 +90,6 @@
 			document.getElementById("id01").innerHTML = out;
 		}		
 	</script>
-
-
-
-
 	<script src="script.js"></script>
 
 </body>
