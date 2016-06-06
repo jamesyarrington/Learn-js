@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
-<link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-2.0.0/jasmine_favicon.png">
-<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-2.0.0/jasmine.css">
- 
-<script type="text/javascript" src="jasmine/lib/jasmine-2.0.0/jasmine.js"></script>
-<script type="text/javascript" src="jasmine/lib/jasmine-2.0.0/jasmine-html.js"></script>
-<script type="text/javascript" src="jasmine/lib/jasmine-2.0.0/boot.js"></script>
+
+<script src="script.js"></script>
 
 <head>
 	<title>Our Company</title>
 	<link href="site.css" rel="stylesheet">
 	<meta charset="UTF-8">
 	<nav id="nav01"></nav>
+
 </head>
 
 <body>
@@ -29,7 +26,8 @@
 		<footer id="foot01"></footer>
 	</div>
 
-<script src="script.js"></script>
+	<script>replaceHTML("nav01", generateNav())</script>
+	<script>replaceHTML("foot01", generateFooter())</script>
 
 </body>
 </html>
