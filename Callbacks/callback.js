@@ -25,6 +25,20 @@ exports.writeData = function(myData) {
 	exports.appendInner('output', myData);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Run script if not in node.
 if (!exports.hasOwnProperty('inNode')) {
 	// Script to run:
@@ -37,3 +51,10 @@ if (!exports.hasOwnProperty('inNode')) {
 	// 	500);
 	exports.appendInner('output', 'Continuing ...');
 }
+
+//
+
+var target = window.module = window.module || {}
+target.exports = window.module.exports = window.module.exports || {}
+
+exports.foo = foo
